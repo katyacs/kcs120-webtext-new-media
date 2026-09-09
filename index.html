@@ -1,0 +1,288 @@
+<!--Looks like you're ready to get making with Pitt Fuego Webtext Generator. Good luck. Let's remember a few basics:
+
+1. If you haven't worked through an introductory project like "I Am...A Project in Becoming," please do so. It will give you the basic skills to use this webtext generator.
+2. Use HTML5 compatible file formats.
+3. Reduce image size when possible. 
+4. Keep asset names simple and machine readable. We recommend camelCase. 
+5. Match asset name and file type in your code. Be case sensitive. 
+6. Consider accessibility: Use alt-text to describe images for the visually impaired, be descriptive when labeling links, and use clear button language. 
+7. Be respectful of your own and others' privacy. 
+8. Consult W3 or Stack Overflow when our code is not working or you need it to do something more than it's doing.
+9. When you make a mistake, Control Z, Control Z, Control Z...
+10. Publish, share, spread the love!-->
+
+<!--BTW. You can leave these hidden HTML text fields be, or delete them. They are but road signs, absent from the larger design-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Random Art</title>
+<link rel="icon" type="image/jpg" href="favicon.jpg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<!--We've added Google Fonts to The Webtext Generator. Go to https://www.w3schools.com/howto/howto_google_fonts.asp to find fonts and add them to this stylesheet link and to the html selector on style.css-->
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+
+<body>
+
+<!--To adjust hero image and text, find hero-image class on style.css-->
+<div class="hero-image">
+  <div class="hero-text">
+      <h1 id = "title">Random Art</h1>
+      <script> 
+  const title = document.getElementById("title");
+  let clickCount = 0;
+  const spinAnimation = [
+      {transform:'rotate(0deg)'},
+      {transform:'rotate(360deg)'}
+    ];
+
+    const spinTiming ={
+      duration: 1000,
+      iterations: Infinity,
+      easing: 'linear'
+    };
+  title.addEventListener("click", function() {
+    clickCount++;
+    if(clickCount === 1)
+    {
+      title.style.transform = "translateX(50px) translateY(50px) rotate(45deg)";
+    }
+    else if(clickCount === 2)
+    {
+       title.style.transform = "translateX(-90px) translateY(-100px) rotate(-90deg)";
+    }
+    else if(clickCount === 3)
+    {
+       title.style.transform = "translateX(-30px) translateY(80px) rotate(-25deg)";
+    }
+    else if(clickCount === 4)
+    {
+       title.animate(spinAnimation, spinTiming);
+    }
+    else if(clickCount === 5)
+    {
+       title.getAnimations().forEach(animation => animation.cancel());
+        title.style.transform = "translateX(120px) translateY(200px) rotate(-180deg)";
+    }
+    else if(clickCount === 6)
+    {
+      clickCount = 0;
+      title.style.transform = "none"; 
+    }
+  });
+</script>
+      <h2>That's not actually random</h2>
+  </div>
+</div>
+<marquee>It looks all over the place</marquee>
+<marquee style="font-family:fantasy; color: #000000" bgcolor="#ccffff"  direction="right" scrollamount="5">It's really not though.</marquee>
+<marquee style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #FFFFFF" bgcolor="#000080"  direction="left" scrollamount="10">Everything is strategically placed.</marquee>
+<span style=”width: 200; height: 100; font-size: 20px; font-family: verdana; color: #0000CC; filter: blur(add = 1, direction = 220, strength = 10)”>CLICK THE TITLE</span>
+<marquee behavior=alternate width=”202″ scrollamount=”8″ scrolldelay=”95″ height=”37″ bgcolor=”#cfffff”> :)</marquee>
+
+
+<!--To build your webtext, copy the code snippet (provided below) and paste into the <body> section below this line.-->
+
+
+<div class="text-block" style="text-align: left">
+  <h2>What is art?</h2>
+  <p>Art can be anything, but that doesn't mean everything is art. 
+    Unconventional forms of art from architecture to bowls, graffiti, collages, photography, are still seen as forms of art. 
+    One of the pieces below is an ancient drawing made to give instructions for rice farming. The drawing was clearly made with intention and colorful details;regardless of the fact that it wasn't intended to be art, it is still art.
+    Whether that intention was conscious or subconscious, it came together as a coherent piece with meaning. It's not about whether something was made to be art, it's about whether it ends up having intention and meaning that a person can perceive. 
+    And that perception is important, because art can only really exist because a human made it and because another human is there to see it from their own perspective.</p>
+</div>
+
+
+
+<b><font color=”#cc00FF” size=”5″> <marquee behavior=alternate direction=up scrolldelay=65 height=274 style=”Text-align;filter:wave(add=0,phase=1, freq=1,strength=15,color=#3300CC); color:#FF0000″ scrollamount=”8″><center>What<br>defines<br>art?</center></marquee></font><font size=”5″ color=”#30000″> </font></b>
+
+<div class="pull-quote" style="text-align: center">
+    <h2>Art requires human intent, whether that is concious or subconcious.</h2>
+  </div>
+  <div class="button-box">
+    <a href="https://www.webpagetest.org/blank.html" class="button">Is this a blank canvas?</a>
+  </div>
+
+<!--<div class="video">
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KVUBbM7pIYw?si=S02HKRwmh-psrWHJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+       <p><i>Add a caption.</i></p>
+</div> -->
+
+  <div class="flexbox-container">
+    <div class="row">
+        <div class="column">
+            <img src="statue.jpg" alt="statue">
+            <img src="temple.jpg" alt="describe the image HERE for accessibility purposes">
+        </div>
+        <div class="column">
+            <img src="rice.jpg" alt="describe the image HERE for accessibility purposes">
+            <img src="bowls.jpg" alt="describe the image HERE for accessibility purposes">
+        </div>
+        <div class="column">
+            <img src="gaudi.jpg" alt="describe the image HERE for accessibility purposes">
+            <img src="banana.jpg" alt="describe the image HERE for accessibility purposes">
+        </div>
+    </div>
+        <p><i>Different types of art confined by their media.</i></p>
+  </div>
+
+  <div class="text-block" style="text-align: left padding: auto;">
+    <h2>Limits</h2>
+    <p>Every piece I picked is limited by whatever it's made of. A painting is stuck on a flat canvas, so it's only ever two dimensional no matter how much depth the artist tries to fake. A building has to follow the laws of physics and actually work for the people using it, so its form is never totally free. A vase or a bowl only has so much curved space to decorate before it runs out of room. A statue, unlike a painting, can't just exist in two dimensions, it has to take up real space. None of these limits make the piece any less artistic though. If anything, working within those limits is part of what gives each piece its character. So art can be anything, but it's never made without limits, it's always shaped by the medium it's stuck in.</p>
+ </div>
+
+<div class="logo">
+  <img src="fuego.jpg" alt="Pitt Fuego Flame" width="25%">
+  <p><b>generated by <a href="https://pitt-fuego.github.io/Pitt-Fuego-Coding-Tools/">Pitt Fuego</a></b></p>
+  <p><em>Why make a spark when you can light a fire?</em></p>
+</div>
+  </body>
+     </html>
+
+  
+
+       <!--Looking to add components? You've come to the right place. Copy and paste Code Snippets and add to the body section. Adjust class CSS properties on style.css.
+
+
+    ***Add Text Block***
+
+    (Format textblock using inline styling: text-align: left, center, justify, right. To improve accessibility, always left-align text longer than three lines; Format text: <i>italics</i>; <b>bold</b>; <u>underline</u>; <mark>highlight</mark>; <sup>superscript</sup>; <sub>subscript</sub>; Link Website: <a href="link">LinkName</a>; Line Breaks: <br></br>;
+
+  <div class="text-block" style="text-align: left">
+    <h2>Header</h2>
+       <p>We recommend using our mobile-ready text sizing. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+
+
+    ***Add Pull Quote***
+
+    (Format text: Italics: <i>italics</i>; Bold: <b>bold</b>. Change font and font size using CSS)
+
+  
+
+
+
+    ***Bulleted Points or List***
+
+    (Nest within text-block or style using CSS. Change <ul> to <ol> in HTML to switch from unordered list to ordered list.)
+
+  <div>
+    <ul>
+      <li>first</li>
+      <li>second</li>
+      <li>third</li>
+    </ul>
+  </div>
+
+
+
+    ***Add Link that Looks Like a Button***
+
+    (Clearly label link action. For more stylings, find button-box class properties on style.css)
+
+  <div class="button-box">
+    <a href="https://pitt-fuego.github.io/Pitt-Fuego-Coding-Tools/" class="button">Go to Fuego</a>
+  </div>
+
+
+
+    ***Add CSS Flexbox Container with Placeholder Images***
+
+    (Add or subtract columns. Control column width using CSS.)
+
+  <div class="flexbox-container">
+    <div class="row">
+        <div class="column">
+            <img src="pgrid1.jpg" alt="describe the image HERE for accessibility purposes">
+            <img src="pgrid2.jpg" alt="describe the image HERE for accessibility purposes">
+        </div>
+        <div class="column">
+            <img src="pgrid3.jpg" alt="describe the image HERE for accessibility purposes">
+            <img src="pgrid4.jpg" alt="describe the image HERE for accessibility purposes">
+        </div>
+        <div class="column">
+            <img src="pgrid5.jpg" alt="describe the image HERE for accessibility purposes">
+            <img src="pgrid6.jpg" alt="describe the image HERE for accessibility purposes">
+        </div>
+    </div>
+        <p><i>Add a caption.</i></p>
+  </div>
+
+
+
+    ***Add Image Frame and Filters***
+
+    (Control image width using inline styling. Adjust "frame" class properties using CSS.)
+
+  <img class="frame" src="hero.jpg" width="50%" alt="describe the image HERE for accessibility purposes">
+    <div class="caption">
+      <p><i>Add a caption</i></p>
+    </div>
+  
+
+
+
+    ***Add Polaroid***
+
+    (Control image width using CSS.)
+
+  <div class="polaroid">
+    <img src="polaroid.jpg" alt="describe the image HERE for accessibility purposes">
+      <div class="polaroid-caption">
+        <p><i>Add a caption</i></p>
+      </div>
+  </div>
+
+
+
+      ***Add Image Container with Text Box***
+
+      (Control Image Container properties using CSS.)
+
+  <div class="image-container">
+    <img src="fuego.jpg" alt="describe image here">
+      <div class="image-container-text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+  </div>
+
+
+
+    ***Add Parallax Window***
+
+      (Adjust window height using parallax class on style.css)
+
+  <div class="parallax"></div>
+    <div class="caption">
+      <p><i>Add a caption.</i></p>
+  </div>
+
+
+
+     ***Embed YouTube Video***
+
+  <div class="video">
+    <div class="video-container">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/cmocHqJ2UvI?si=C6YuF1xIC3rMRX56" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+         <p>Add a caption.</p>
+  </div>
+
+
+    ***Add Copyright Footer***
+
+  <div class="footer">
+    <p><i>Copyright Your Name, Year.</i></p>
+  </div>
+
+
+
+    ***Need something that's not here? Go to https://www.w3schools.com to find all kinds of resources to facilitate your code learning.***
